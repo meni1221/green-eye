@@ -16,6 +16,7 @@ const login = async (user) => {
       {
         user_name: dbUser.user_name,
         role: dbUser.role,
+        id: dbUser._id,
       },
       process.env.TOKEN_SECRET,
       {
@@ -25,10 +26,9 @@ const login = async (user) => {
     return token;
   } catch (err) {
     console.log(err);
-    throw err
+    throw err;
   }
 };
-
 
 module.exports = {
   login,
