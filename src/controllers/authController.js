@@ -14,7 +14,11 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-  } catch (err) {}
+    res.clearCookie("token")
+    res.sendStatus(200)
+  } catch (err) {
+    res.sendStatus(500)
+  }
 };
 
 module.exports = {

@@ -1,10 +1,13 @@
 const createPoll = async (req, res) => {
     try {
+     res.send("You've got me, mr commander")
     } catch (err) {}
   };
   
   const getNotifications = async (req, res) => {
     try {
+     res.send("You've got me, mr commander? solider? who knows?!")
+
     } catch (err) {}
   };
   
