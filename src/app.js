@@ -13,6 +13,8 @@ const port = process.env.PORT || 1415;
 app.use(exp.json());
 app.use(cookieParser());
 
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 app.use("/auth", require("./routes/authRouter"));
 app.use("/user", require("./routes/userRouter"));
 app.use("/greenEye", require("./routes/greenEyeRouter"));
